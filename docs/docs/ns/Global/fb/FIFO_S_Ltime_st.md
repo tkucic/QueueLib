@@ -29,7 +29,7 @@ END_METHOD
 METHOD Dequeue:
     INTERFACE
         VAR_OUTPUT 
-            Value : LTIME; (*Value to add to queue*)
+            Value : LTIME; (*Return value*)
         END_VAR
     END_INTERFACE
     IF isEmpty() THEN RETURN; END_IF

@@ -2,7 +2,7 @@
 
 ## Documentation for Program LIFO_UnitTest  
 
-Automated unit tests for function block LIFO_Int  
+Automated unit tests for function block LIFO  
 
 ### Interface  
 
@@ -20,9 +20,11 @@ Automated unit tests for function block LIFO_Int
 | VAR | vReportsEmptyOk | BOOL |  | FALSE |  |  
 | VAR | vReturnsTrueOnUnSuccPopOk | BOOL |  | FALSE |  |  
 | VAR | vPeekOk | BOOL |  | FALSE |  |  
-| VAR | lifo | LIFO_Int |  |  |  |  
+| VAR | v16bHandlingOk | BOOL |  | FALSE |  |  
+| VAR | lifo | LIFO_16b |  |  |  |  
 | VAR | vLifoBuffer | ARRAY[0..5] OF INT |  |  |  |  
-| VAR | vTempInt | INT |  |  |  |  
+| VAR | vTempWord | WORD |  |  |  |  
+| VAR | vTempWordArr | ARRAY[0..3] OF WORD |  |  |  |  
 | VAR | vTempIdx | UINT |  |  |  |  
 
 List of tests  
@@ -36,14 +38,15 @@ Test7: Lifo can count correctly
 Test8: Lifo reports EMPTY when EMPTY  
 Test9: Lifo reports FALSE on unsuccesfull Pop  
 Test10: Peek functionality: Should return the next element but not remove it, it should report correct index of the buffer  
+Test11: 16bit handling: Multiple types should be returned  
 
 ### Metrics  
 
-- VAR : 16
+- VAR : 18
 
 | Actions | Methods | Lines of code | Lines of comments | Lines in total | Maintainable size |
 | ------- | ------- | ------------- | ----------------- | -------------- | ----------------- |
-| 0 | 0 | 30 |12 |54 | 46 |
+| 0 | 0 | 45 |13 |73 | 63 |
 
 
 

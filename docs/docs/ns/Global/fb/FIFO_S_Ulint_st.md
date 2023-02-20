@@ -29,7 +29,7 @@ END_METHOD
 METHOD Dequeue:
     INTERFACE
         VAR_OUTPUT 
-            Value : ULINT; (*Value to add to queue*)
+            Value : ULINT; (*Return value*)
         END_VAR
     END_INTERFACE
     IF isEmpty() THEN RETURN; END_IF

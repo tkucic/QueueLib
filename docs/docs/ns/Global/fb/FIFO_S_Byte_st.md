@@ -29,7 +29,7 @@ END_METHOD
 METHOD Dequeue:
     INTERFACE
         VAR_OUTPUT 
-            Value : BYTE; (*Value to add to queue*)
+            Value : BYTE; (*Return value*)
         END_VAR
     END_INTERFACE
     IF isEmpty() THEN RETURN; END_IF

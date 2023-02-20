@@ -23,7 +23,7 @@ END_FUNCTION_BLOCK
 METHOD Dequeue:
     INTERFACE
         VAR_OUTPUT 
-            Value : SINT; (*Value to add to queue*)
+            Value : SINT; (*Return value*)
         END_VAR
     END_INTERFACE
     IF isEmpty() THEN RETURN; END_IF

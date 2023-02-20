@@ -2,7 +2,7 @@
 
 ## Documentation for Program FIFO_S_UnitTest  
 
-Automated unit tests for function block FIFO_S_Int  
+Automated unit tests for function block FIFO_S  
 
 ### Interface  
 
@@ -23,9 +23,11 @@ Automated unit tests for function block FIFO_S_Int
 | VAR | vFifoFullPrevent2Ok | BOOL |  | FALSE |  |  
 | VAR | vFifoFullPrevent3Ok | BOOL |  | FALSE |  |  
 | VAR | vPeekOk | BOOL |  | FALSE |  |  
-| VAR | fifo | FIFO_S_Int |  |  |  |  
+| VAR | v16bHandlingOk | BOOL |  | FALSE |  |  
+| VAR | fifo | FIFO_S_16b |  |  |  |  
 | VAR | vFifoBuffer | ARRAY[0..5] OF INT |  |  |  |  
-| VAR | vTempInt | INT |  |  |  |  
+| VAR | vTempWord | WORD |  |  |  |  
+| VAR | vTempWordArr | ARRAY[0..3] OF WORD |  |  |  |  
 | VAR | vTempIdx | UINT |  |  |  |  
 
 List of tests  
@@ -41,14 +43,15 @@ Test9: Fifo reports FALSE on unsuccesfull dequeue
 Test10: Fifo prevents enqueue if its full  
 Test11: Able to enqueue again only after empty flag  
 Test12: Peek functionality: Should return the next element but not remove it, it should report correct index of the buffer  
+Test13: 16bit handling: Multiple types should be returned  
 
 ### Metrics  
 
-- VAR : 19
+- VAR : 21
 
 | Actions | Methods | Lines of code | Lines of comments | Lines in total | Maintainable size |
 | ------- | ------- | ------------- | ----------------- | -------------- | ----------------- |
-| 0 | 0 | 44 |14 |73 | 63 |
+| 0 | 0 | 59 |15 |92 | 80 |
 
 
 

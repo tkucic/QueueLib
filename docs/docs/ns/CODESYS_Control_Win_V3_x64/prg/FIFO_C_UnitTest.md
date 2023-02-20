@@ -2,7 +2,7 @@
 
 ## Documentation for Program FIFO_C_UnitTest  
 
-Automated unit tests for function block FIFO_C_Int  
+Automated unit tests for function block FIFO_C  
 
 ### Interface  
 
@@ -21,9 +21,11 @@ Automated unit tests for function block FIFO_C_Int
 | VAR | vReturnsTrueOnUnSuccDeqOk | BOOL |  | FALSE |  |  
 | VAR | vCirculationOk | BOOL |  | FALSE |  |  
 | VAR | vPeekOk | BOOL |  | FALSE |  |  
-| VAR | fifo | FIFO_C_Int |  |  |  |  
+| VAR | v16bHandlingOk | BOOL |  | FALSE |  |  
+| VAR | fifo | FIFO_C_16b |  |  |  |  
 | VAR | vFifoBuffer | ARRAY[0..5] OF INT |  |  |  |  
-| VAR | vTempInt | INT |  |  |  |  
+| VAR | vTempWord | WORD |  |  |  |  
+| VAR | vTempWordArr | ARRAY[0..3] OF WORD |  |  |  |  
 | VAR | vTempIdx | UINT |  |  |  |  
 
 List of tests  
@@ -38,14 +40,15 @@ Test8: Fifo reports EMPTY when EMPTY
 Test9: Fifo reports FALSE on unsuccesfull dequeue  
 Test10: Fifo circulates to index 0 after being full and one item dequeued  
 Test11: Peek functionality: Should return the next element but not remove it, it should report correct index of the buffer  
+Test12: 16bit handling: Multiple types should be returned  
 
 ### Metrics  
 
-- VAR : 17
+- VAR : 19
 
 | Actions | Methods | Lines of code | Lines of comments | Lines in total | Maintainable size |
 | ------- | ------- | ------------- | ----------------- | -------------- | ----------------- |
-| 0 | 0 | 36 |13 |62 | 53 |
+| 0 | 0 | 51 |14 |81 | 70 |
 
 
 

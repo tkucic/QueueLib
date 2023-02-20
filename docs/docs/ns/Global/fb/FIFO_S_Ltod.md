@@ -53,7 +53,7 @@ Returns the next FIFO element stored in the buffer
 
 | Direction | Name | Type | Attribute | Initial Value | Documentation |
 | --------- | ---- | ---- | --------- | ------------- | ------------- |
-| VAR_OUTPUT | Value | LTIME_OF_DAY |  |  | Value to add to queue |  
+| VAR_OUTPUT | Value | LTIME_OF_DAY |  |  | Return value |  
 
 
 ### Method Enqueue : BOOL  

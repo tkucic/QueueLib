@@ -2,7 +2,7 @@
 
 ## Documentation for Program FIFO_FWFT_UnitTest  
 
-Automated unit tests for function block FIFO_FWFT_Int  
+Automated unit tests for function block FIFO_FWFT  
 
 ### Interface  
 
@@ -21,9 +21,11 @@ Automated unit tests for function block FIFO_FWFT_Int
 | VAR | vReturnsTrueOnUnSuccDeqOk | BOOL |  | FALSE |  |  
 | VAR | vFifoFWFTOk | BOOL |  | FALSE |  |  
 | VAR | vPeekOk | BOOL |  | FALSE |  |  
-| VAR | fifo | FIFO_FWFT_Int |  |  |  |  
+| VAR | v16bHandlingOk | BOOL |  | FALSE |  |  
+| VAR | fifo | FIFO_FWFT_16b |  |  |  |  
 | VAR | vFifoBuffer | ARRAY[0..5] OF INT |  |  |  |  
-| VAR | vTempInt | INT |  |  |  |  
+| VAR | vTempWord | WORD |  |  |  |  
+| VAR | vTempWordArr | ARRAY[0..3] OF WORD |  |  |  |  
 | VAR | vTempIdx | UINT |  |  |  |  
 
 List of tests  
@@ -38,14 +40,15 @@ Test8: Fifo reports EMPTY when EMPTY
 Test9: Fifo reports FALSE on unsuccesfull dequeue  
 Test10: Fifo first word fall trough is working  
 Test11: Peek functionality: Should return the next element but not remove it, it should report correct index of the buffer  
+Test12: 16bit handling: Multiple types should be returned  
 
 ### Metrics  
 
-- VAR : 17
+- VAR : 19
 
 | Actions | Methods | Lines of code | Lines of comments | Lines in total | Maintainable size |
 | ------- | ------- | ------------- | ----------------- | -------------- | ----------------- |
-| 0 | 0 | 35 |13 |61 | 52 |
+| 0 | 0 | 50 |14 |80 | 69 |
 
 
 
